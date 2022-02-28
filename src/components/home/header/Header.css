@@ -1,0 +1,21 @@
+.header {
+  margin: 4.5rem 0;
+}
+
+.hero-title {
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.hero-subTitle {
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.hero-subTitle span {
+  color: var(--primary-color);
+}
+
+.hero-text {
+  font-size: 1.2rem;
+}

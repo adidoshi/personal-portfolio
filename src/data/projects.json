@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "title": "Splash Store - Ecommerce Web Application",
+        "date": "25th Nov 2021",
+        "tech": ["Redux", "Vanilla CSS", "JWT", "Formik", "yup", "stripe", "Razorpay", "chart.js", "cloudinary", "nodemailer"],
+        "description": "Created this app in MERN stack, react-redux for state management. Core features include add to cart, product listing, product reviews/ ratings, search/filter/sort functionality. User JWT based Authentication, forgot/reset password, checkout process -> Stripe & Razorpay payment gateway, user profile page. Admin Dasboard Management, charts representation, order actions (change status - get's real time updated), create new product, edit/ delete products, user admin role update, delete reviews.",
+        "githubUrl": "https://github.com/adidoshi/e-commerce_frontend",
+        "liveUrl": "https://splashstore.netlify.app/"
+    },
+    {
+        "id": 2,
+        "title": "Splash Talk - A Social Media App to share posts",
+        "date": "20th Dec 2021",
+        "tech": ["Context API", "useReducer", "JWT", "dark-mode", "cloudinary", "react-moment", "emoji-picker"],
+        "description": "MERN stack app, context API & useReducer for app state management, pure vanilla CSS for UI, Cloudinary for image upload. Core features include JWT based Authentication, create post with text & image, feed & timeline screen, search users, Follow/Unfollow users, Like/comment on post, user profile page (cover/profile picture).",
+        "githubUrl": "https://github.com/adidoshi/social-media-frontend",
+        "liveUrl": "https://splashsocial.netlify.app/"
+    }, 
+    {
+        "id": 3,
+        "title": "Splash Chat - Real Time Messaging Application",
+        "date": "2nd Jan 2022",
+        "tech": ["Socket.io", "JWT", "Chakra-UI"],
+        "description": "Created this MERN stack app, Chakra UI for CSS, context for user auth, formik library for form validation. Core features include Socket.io implementation for instant messaging, JWT based Authentication, direct private chat & group chat (add/remove friends via admin), notification management, typing animation, Search users.",
+        "githubUrl": "https://github.com/adidoshi/chat-application",
+        "liveUrl": "https://splashtalk.herokuapp.com/"
+    },
+    {
+        "id": 4,
+        "title": "Splash Tube - Youtube Clone",
+        "date": "16th Jan 2022",
+        "tech": ["Firebase", "Redux", "Google Oauth", "Youtube API V3", "lazy-load", "react-loading-skeleton"],
+        "description": "App built with React JS, redux for state & Sass for styling. Used firebase for google authentication & app deployment. Core features include top vidoes fetched, categories sort, user subscription page subscription count, channel page/videos.",
+        "githubUrl": "https://github.com/adidoshi/youtube-clone",
+        "liveUrl": "https://ytclone-byadi.web.app"
+    },
+    {
+        "id": 5,
+        "title": "Splash to-do Notes - Notes Keeping App",
+        "date": "18th Nov, 2022",
+        "tech": ["Redux-toolkit", "JWT", "React-bootstrap", "markdown"],
+        "description": "MERN stack app, redux toolkit for state management, React Bootstrap for css. Core features include all CRUD operations - create/edit/delete/fetch user notes, user profile page, JWT based Authentication, pin/add to favourite.",
+        "githubUrl": "https://github.com/adidoshi/todo-list_frontend",
+        "liveUrl": "https://splashtodonotes.netlify.app"
+    },
+    {
+        "id": 6,
+        "title": "Weather Search",
+        "date": "8th Sep, 2021",
+        "tech": ["Vanilla Javascript", "Plain CSS", "HTML"],
+        "description": "The app fetches weather data world wide. It take's city as a input from user & then display's temperature & other factors for the city, OpenWeather API. It also refresh different image for particular city!",
+        "githubUrl": "https://github.com/adidoshi/Weather-App",
+        "liveUrl": "https://worldwideweathersearch.netlify.app/"
+    },
+    {
+        "id": 7,
+        "title": "Palindrome date finder",
+        "date": "20th August, 2021",
+        "tech": ["Vanilla Javascript", "Plain CSS", "HTML"],
+        "description": "It tell's weather your birthdate is a Palindrome, if not it show's the nearest palindrome date - (previous / next) & by how many days you missed it.",
+        "githubUrl": "https://github.com/adidoshi/palindrome-birthday",
+        "liveUrl": "https://palindrome-birthday-finder.netlify.app/"
+    },
+    {
+        "id": 8,
+        "title": "Food Recipe App",
+        "date": "14th July, 2021",
+        "tech": ["Vanilla Javascript", "Plain CSS", "HTML"],
+        "description": "Recipe search by ingredients & dish name! The app display's the data of food-recipes. It is a fully responsive web-app.",
+        "githubUrl": "https://github.com/adidoshi/Recipe-search",
+        "liveUrl": "https://foodrecipebyitems.netlify.app/"
+    }
+]

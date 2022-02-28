@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+/* nav styling */
+.navbar {
+  padding: 1.4rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar-title {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title .navbar-brand {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  font-family: "Pacifico", cursive;
+}
+
+.navbar-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-list {
+  list-style: none;
+  margin-left: auto;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list-item {
+  display: none;
+}
+
+.navbar-list li {
+  margin: 0 0.8rem;
+  cursor: pointer;
+}
+
+/* sidebar on smaller screens */
+.sidebar {
+  width: 80%;
+  top: 0;
+  height: 100vh;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  position: fixed;
+  box-shadow: 0 8px 16px 0 hsla(0, 0%, 0%, 0.2);
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.sidebar-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem;
+}
+
+.sidebar-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  margin: 2.5rem 0;
+}
+
+.sidebar-list li {
+  margin-top: 2.5rem;
+  font-size: 1.3rem;
+}
+
+/* media queries */
+@media screen and (min-width: 820px) {
+  .navbar {
+    width: 75%;
+  }
+
+  .navbar-title button {
+    display: none;
+  }
+
+  .navbar-list-item {
+    display: block;
+  }
+}

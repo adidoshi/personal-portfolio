@@ -1,0 +1,49 @@
+.skillsList {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 1.8rem;
+}
+
+.skillsWrapper {
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.skillsWrapper i {
+  font-size: 25px;
+  padding: 1rem;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.skills-extra-icon {
+  height: 25px;
+  width: 25px;
+}
+
+/* media queries */
+@media screen and (min-width: 820px) {
+  .skillsList {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .skillsWrapper i {
+    font-size: 40px;
+    padding: 1rem;
+  }
+
+  .skills-extra-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .skills-title {
+    text-align: center;
+    font-size: 1rem;
+  }
+}

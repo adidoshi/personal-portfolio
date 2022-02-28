@@ -1,0 +1,30 @@
+[
+    {
+        "title": "React Router DOM v6",
+        "date": " Feb, 2022",
+        "readTime": "6 min read",
+        "description": "All you want to know about react-router-dom latest version 6. I've explained in the blog about Configuring routes, Navigating programmatically, Dyanamic routes, Nested routes, Route parameters, Lazy loading.",
+        "url": "https://dev.to/adidoshi/react-router-dom-v6-51j2"
+    },
+    {
+        "title": "Express Error Handling",
+        "date": "Feb, 2022",
+        "readTime": "5 min read",
+        "description": "Want to know the best practices to be followed while creating an node/express app, In this blog I've covered error middleware, custom error handling, prod vs dev errors.",
+        "url": "https://dev.to/adidoshi/express-error-handling-7nd"
+    },
+    {
+        "title": "HTTP Request Methods",
+        "date": "Sep, 2021",
+        "readTime": "4 min read",
+        "description": "Explained about various types of HTTP request methods which are used commonly.",
+        "url": "https://dev.to/adidoshi/http-request-methods-16ik"
+    },
+    {
+        "title": "Finding duplicates from an Array",
+        "date": "Sep, 2021",
+        "readTime": "4 min read",
+        "description": "Breaking down the problem statement into smaller chunks & solving the problem.",
+        "url": "https://adidoshi.hashnode.dev/finding-duplicates-in-an-array"
+    }
+]

@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./screens/Home";
+import Navbar from "./components/home/navbar/Navbar";
+import Projects from "./screens/Projects";
+import Blogs from "./screens/Blogs";
+import { Route, Routes } from "react-router-dom";
+import useTheme from "./context/ThemeContext";
+import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  const { theme } = useTheme();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        color: theme.foreground,
+        backgroundColor: theme.sidebarBg,
+      }}>
+      <Navbar />
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="blogs" element={<Blogs />} />
+        </Routes>
+      </ScrollToTop>
+      <Footer />
     </div>
   );
 }
