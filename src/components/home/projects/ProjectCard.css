@@ -1,6 +1,6 @@
 .project-card {
   height: max-content;
-  width: 18rem;
+  width: 90%;
   border-radius: 1rem;
   box-shadow: 0 5px 20px -5px rgb(191 192 192);
   margin: 1rem 0;
@@ -109,4 +109,10 @@
 
 .project-card-actions-btn:hover {
   background-color: var(--secondary-color);
+}
+
+@media screen and (min-width: 820px) {
+  .project-card {
+    width: 18rem;
+  }
 }
