@@ -20,9 +20,10 @@ const Header = () => {
         I'm Aditya A <span ref={textRef}></span>
       </h1>
       <p className="hero-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-        itaque aut voluptates? Nihil, quia quam. Deleniti itaque aut voluptates?
-        Nihil, quia quam.
+        Creating real time projects excites me a lot, exploring new technologies
+        gradually with enthusiasm, I like the process of learnings,
+        implementation, debugging while programming which help me to grow day by
+        day. I'm looking for an full time react developer opportunity.
       </p>
     </header>
   );
