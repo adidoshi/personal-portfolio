@@ -22,8 +22,9 @@ const Header = () => {
       <p className="hero-text">
         Creating real time projects excites me a lot, exploring new technologies
         gradually with enthusiasm, I like the process of learnings,
-        implementation, debugging while programming which help me to grow day by
-        day. I'm looking for an full time react developer opportunity.
+        implementation, debugging - into this programming world which helps me
+        to grow day by day. I'm looking for a full time react developer
+        opportunity.
       </p>
     </header>
   );
