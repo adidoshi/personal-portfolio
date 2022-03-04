@@ -1,5 +1,5 @@
-import { CheckCircle, Mail, Send } from "@mui/icons-material";
 import React, { useRef, useState } from "react";
+import { CheckCircle } from "@mui/icons-material";
 import './Contact.css'
 import emailjs from 'emailjs-com';
 
