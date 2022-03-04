@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { init } from "ityped";
 import "./Header.css";
+import cvPdf from "../../../assets/aditya-doshi-cv.pdf";
 
 const Header = () => {
   const textRef = useRef();
@@ -26,6 +27,11 @@ const Header = () => {
         to grow day by day. I'm looking for a full time react developer
         opportunity.
       </p>
+      <div>
+        <a href={cvPdf} download="Aditya-Doshi-CV.pdf">
+          <button className="btn">Download CV</button>
+        </a>
+      </div>
     </header>
   );
 };

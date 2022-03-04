@@ -15,11 +15,11 @@ const BlogSection = () => {
         ))}
       </div>
 
-      <div className="btn-more">
+      {/* <div className="btn-more">
         <Link to="/blogs">
           <button className="btn">View All</button>
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };

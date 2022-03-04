@@ -10,7 +10,7 @@
 }
 
 .blog-card {
-  max-width: 18.75rem;
+  max-width: 17.5rem;
   width: 100%;
   overflow: hidden;
   background-color: var(--secondary-two);
@@ -44,6 +44,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.5s;
+}
+
+.title-sm {
+  font-size: 1rem;
 }
 
 .blog-content {

@@ -14,6 +14,13 @@ const ProjectCard = ({ project }) => {
         <img src={project.img} alt="projectImg" className="project-img" />
       </div>
       <div className="project-card-body">{project.title}</div>
+      <div className="tech-icons">
+        {project.iconSymbol.map((icon, i) => (
+          <span key={i}>
+            <i className={`devicon-${icon} colored`}></i>
+          </span>
+        ))}
+      </div>
       <div className="project-card-actions">
         <a href={project.githubUrl} target="_blank" rel="noreferrer">
           <button className="project-card-actions-btn-outline">Code</button>

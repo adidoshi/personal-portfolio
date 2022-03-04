@@ -72,6 +72,11 @@
   padding: 0 1rem;
 }
 
+.tech-icons {
+  /* margin-top: 0.2rem; */
+  padding: 0.4rem 0.4rem 0 0.4rem;
+}
+
 .project-card-actions {
   padding: 1rem;
 }
@@ -113,6 +118,6 @@
 
 @media screen and (min-width: 820px) {
   .project-card {
-    width: 18rem;
+    width: 17.5rem;
   }
 }

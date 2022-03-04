@@ -48,13 +48,33 @@ const Navbar = () => {
           </div>
           <ul className="navbar-list">
             <NavLink to="/" style={navLinkStyles}>
-              <li className="navbar-list-item">Home</li>
+              <li
+                className="navbar-list-item"
+                style={{
+                  color: theme.foreground,
+                }}>
+                Home
+              </li>
             </NavLink>
             <NavLink to="projects" style={navLinkStyles}>
-              <li className="navbar-list-item">Projects</li>
+              <li
+                className="navbar-list-item"
+                style={{
+                  color: theme.foreground,
+                  display: "none"
+                }}>
+                Projects
+              </li>
             </NavLink>
             <NavLink to="blogs" style={navLinkStyles}>
-              <li className="navbar-list-item">Blogs</li>
+              <li
+                className="navbar-list-item"
+                style={{
+                  color: theme.foreground,
+                  display: "none"
+                }}>
+                Blogs
+              </li>
             </NavLink>
             <li className="navbar-list-item" onClick={scrollToBottom}>
               Contact
