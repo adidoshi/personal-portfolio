@@ -2,9 +2,12 @@ import React, { useRef, useState } from "react";
 import { CheckCircle } from "@mui/icons-material";
 import './Contact.css'
 import emailjs from 'emailjs-com';
+import useTheme from "../../../context/ThemeContext";
+
 
 const Contact = () => {
     const [done, setDone] = useState(false)
+    const { theme, iconColor } = useTheme();
 
     const formRef = useRef()
 
@@ -31,13 +34,33 @@ const Contact = () => {
         <div className="contact-info">
        <h3>Connect with me</h3>
           <div className="info-wrap">
-            <div className="info">
+            <a
+                href="mailto:adityadoshi25@gmail.com"
+                target="_blank"
+                rel="noreferrer" className="info">
               <div className="contact-icon">
-              <i className="fa-solid fa-envelope"></i>
+              <i className="fa-solid fa-envelope" style={{color: iconColor}}></i>
               </div>
               <p className="info-text">adityadoshi25@gmail.com</p>
-            </div>
-
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://github.com/adidoshi" className="info">
+              <div className="contact-icon diff">
+              <i className="devicon-github-original" style={{color: iconColor}}></i>
+              </div>
+              <p className="info-text"  style={{
+        color: theme.foreground,
+       
+      }}>adidoshi</p>
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/aditya-doshi08" className="info">
+              <div className="contact-icon diff">
+              <i className="devicon-linkedin-plain"></i>
+              </div>
+              <p className="info-text"  style={{
+        color: theme.foreground,
+  
+      }}>aditya-doshi08</p>
+            </a>
           </div>
         </div>
         <form ref={formRef} onSubmit={handleSubmit} className="contact-form">

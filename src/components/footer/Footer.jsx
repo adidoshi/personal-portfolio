@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import gmailIcon from "../../assets/gmail.svg";
+// import gmailIcon from "../../assets/gmail.svg";
 import { ArrowUpward } from "@mui/icons-material";
 import { Fab } from "@mui/material";
 
@@ -15,7 +15,7 @@ const Footer = () => {
       <footer className="footer">
         <hr />
         <div className="footer-container">
-          <ul className="footer-links">
+          {/* <ul className="footer-links">
             <li style={{ marginRight: "12px" }}>
               <a
                 href="mailto:adityadoshi25@gmail.com"
@@ -48,7 +48,7 @@ const Footer = () => {
                 <i className="devicon-twitter-original colored"></i>
               </a>
             </li>
-          </ul>
+          </ul> */}
 
           <div className="footer-made-with">&lt;&gt; Aditya &lt;/&gt;</div>
           <div className="copyright">

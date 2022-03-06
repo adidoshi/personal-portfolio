@@ -42,6 +42,11 @@
   font-size: 1.2rem;
 }
 
+.diff i {
+  line-height: 44px;
+  font-size: 1.3rem;
+}
+
 .info-text {
   margin-left: 0.4rem;
   font-size: 1.1rem;

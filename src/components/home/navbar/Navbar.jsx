@@ -36,13 +36,13 @@ const Navbar = () => {
   };
   return (
     <>
-      <div>
+      <div className='outer'>
         <nav className="navbar">
           <div className="navbar-title">
             <button className="navbar-btn" onClick={menuToggleHandler}>
               <Menu fontSize="large" sx={{ color: iconColor }} />
             </button>
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/" style={{color: 'white'}}>
               adidoshi
             </Link>
           </div>
@@ -50,43 +50,46 @@ const Navbar = () => {
             <NavLink to="/" style={navLinkStyles}>
               <li
                 className="navbar-list-item"
-                style={{
-                  color: theme.foreground,
-                }}>
+                style={{color: 'white'}}
+                >
                 Home
               </li>
             </NavLink>
-            <NavLink to="projects" style={navLinkStyles}>
+            <a href="#skillSection">
               <li
                 className="navbar-list-item"
-                style={{
-                  color: theme.foreground,
-                  display: "none"
-                }}>
+                style={{color: 'white'}}
+               >
+                Skills
+              </li>
+            </a>
+            <a href="#projectSection">
+              <li
+                className="navbar-list-item"
+                style={{color: 'white'}}
+               >
                 Projects
               </li>
-            </NavLink>
-            <NavLink to="blogs" style={navLinkStyles}>
+            </a>
+            <a href="#blogSection">
               <li
                 className="navbar-list-item"
-                style={{
-                  color: theme.foreground,
-                  display: "none"
-                }}>
+                style={{color: 'white'}}
+               >
                 Blogs
               </li>
-            </NavLink>
-            <li className="navbar-list-item" onClick={scrollToBottom}>
+            </a>
+            <li className="navbar-list-item" onClick={scrollToBottom} style={{color: 'white'}}>
               Contact
             </li>
 
             <li>
-              <button className="navbar-btn" onClick={themeModeHandler}>
+              <button className="navbar-btn" onClick={themeModeHandler} >
                 {theme === themes.light ? (
                   <DarkMode
                     sx={{
                       fontSize: 25,
-                      color: iconColor,
+                      color: 'white',
                     }}
                   />
                 ) : (

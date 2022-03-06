@@ -2,10 +2,11 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { blogsList } from "../../../data/list";
 import BlogCard from "./BlogCard";
+import "./BlogSection.css";
 
 const BlogSection = () => {
   return (
-    <section className="section">
+    <section className="section" id="blogSection">
       <div className="section-header">
         <h3 className="title">My Blogs</h3>
       </div>

@@ -7,7 +7,7 @@ import "./ProjectSection.css";
 const ProjectSection = () => {
   const [projects, setProjects] = useState(false);
   return (
-    <section className="section">
+    <section className="section" id="projectSection">
       <div className="section-header">
         <h3 className="title">My Work</h3>
       </div>
