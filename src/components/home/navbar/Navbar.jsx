@@ -40,7 +40,7 @@ const Navbar = () => {
         <nav className="navbar">
           <div className="navbar-title">
             <button className="navbar-btn" onClick={menuToggleHandler}>
-              <Menu fontSize="large" sx={{ color: iconColor }} />
+              <Menu fontSize="large" sx={{ color: 'white' }} />
             </button>
             <Link className="navbar-brand" to="/" style={{color: 'white'}}>
               adidoshi
@@ -116,16 +116,43 @@ const Navbar = () => {
           <Close sx={{ fontSize: 30, color: iconColor }} />
         </button>
         <ul className="sidebar-list">
-          <NavLink to="/" style={navLinkStyles}>
+          <NavLink to="/"  style={{ color: theme.foreground}}>
             <li>Home</li>
           </NavLink>
-          <NavLink to="projects" style={navLinkStyles}>
+          <a href="#skillSection">
+              <li
+                className="sidebar-list"
+                style={{ color: theme.foreground}}
+                onClick={() => setMenuToggle(false)}
+               >
+                Skills
+              </li>
+            </a>
+            <a href="#projectSection">
+              <li
+                className="sidebar-list"
+                style={{ color: theme.foreground}}
+                onClick={() => setMenuToggle(false)}
+               >
+                Projects
+              </li>
+            </a>
+            <a href="#blogSection">
+              <li
+                className="sidebar-list"
+                style={{ color: theme.foreground}}
+                onClick={() => setMenuToggle(false)}
+               >
+                Blogs
+              </li>
+            </a>
+          {/* <NavLink to="projects" style={navLinkStyles}>
             <li>Projects</li>
           </NavLink>
           <NavLink to="blogs" style={navLinkStyles}>
             <li>Blogs</li>
-          </NavLink>
-          <li onClick={scrollToBottom}>Contact</li>
+          </NavLink> */}
+          <li  style={{ color: theme.foreground}} onClick={scrollToBottom}>Contact</li>
         </ul>
       </div>
     </>
