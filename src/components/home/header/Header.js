@@ -29,7 +29,7 @@ const Header = () => {
       </p>
       <div>
         <a
-          href="https://drive.google.com/file/d/10dJqUUT9X7q93xnRlK8bxbxKc7eqB6wj/view"
+          href="https://drive.google.com/file/d/133kndNstw5ynyzacakEsS7bc1XJpnKRJ/view"
           target="_blank"
           rel="noreferrer">
           <button className="btn">Download CV</button>
