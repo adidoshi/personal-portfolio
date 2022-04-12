@@ -9,6 +9,7 @@ import projectFive from "../assets/projectSs5.png";
 import projectSix from "../assets/projectSs6.png";
 import projectSeven from "../assets/projectSs7.png";
 import projectEight from "../assets/projectSs8.png";
+import projectNine from "../assets/projectSs9.png";
 
 export const iconsList = [
   {
@@ -191,6 +192,18 @@ export const projectsList = [
       "Recipe search by ingredients & dish name! The app display's the data of food-recipes. It is a fully responsive web-app.",
     githubUrl: "https://github.com/adidoshi/Recipe-search",
     liveUrl: "https://foodrecipebyitems.netlify.app/",
+  },
+  {
+    id: 9,
+    title: "CSS Component Library",
+    date: "20th Feb, 2022",
+    iconSymbol: ["css3-plain", "html5-plain"],
+    img: projectNine,
+    tech: ["Plain CSS", "HTML"],
+    description:
+      "Component library where users can style up their project layouts by just importing the CDN link & adding up the components as per need.",
+    githubUrl: "https://github.com/adidoshi/splash-ui",
+    liveUrl: "https://splashui.netlify.app/",
   },
 ];
 
