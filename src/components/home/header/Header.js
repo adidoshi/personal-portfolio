@@ -27,14 +27,14 @@ const Header = () => {
         to grow day by day. I'm looking for a full time react developer
         opportunity.
       </p>
-      <div>
+      {/* <div>
         <a
           href="https://drive.google.com/file/d/1tmI9oOK_tjuXznOKTK0CyLWuiVWvowgI/view"
           target="_blank"
           rel="noreferrer">
           <button className="btn">Download CV</button>
         </a>
-      </div>
+      </div> */}
     </header>
   );
 };
