@@ -99,6 +99,13 @@
   margin-left: 0 1rem;
 }
 
+.email-sent {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (min-width: 820px) {
   .contact-box {
     border-radius: 3rem;

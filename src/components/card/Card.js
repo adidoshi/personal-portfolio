@@ -1,4 +1,3 @@
-import React from "react";
 import useTheme from "../../context/ThemeContext";
 import "./Card.css";
 
@@ -9,7 +8,8 @@ const Card = ({ project }) => {
   return (
     <div
       className="card"
-      style={{ backgroundColor: theme.cardBg, boxShadow: theme.cardBoxShadow }}>
+      style={{ backgroundColor: theme.cardBg, boxShadow: theme.cardBoxShadow }}
+    >
       <h2 className="card-title">{project.title}</h2>
       <div className="card-date">{project.date}</div>
       <div className="card-chip">

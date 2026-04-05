@@ -1,4 +1,3 @@
-import React from "react";
 import "./BlogCard.css";
 
 const BlogCard = ({ blog }) => {

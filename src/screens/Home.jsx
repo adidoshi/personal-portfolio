@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import BlogSection from "../components/home/blogs/BlogSection";
 import Contact from "../components/home/contact/Contact";
@@ -9,7 +8,7 @@ import Skills from "../components/home/skills/Skills";
 const Home = () => {
   return (
     <>
-    <Helmet title="Home | Aditya Doshi" />
+      <Helmet title="Home | Aditya Doshi" />
       <main className="main-container">
         <Header />
         <Skills />
