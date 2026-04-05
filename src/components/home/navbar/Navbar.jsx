@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { Close, DarkMode, LightMode, Menu } from "@mui/icons-material";
 import "./Navbar.css";
 import useTheme, { themes } from "../../../context/ThemeContext";
@@ -6,7 +6,14 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
+  const [activeItem, setActiveItem] = useState("home");
   const { theme, setTheme, iconColor } = useTheme();
+
+  useEffect(() => {
+    if (window.location.pathname === "/") {
+      setActiveItem("home");
+    }
+  }, []);
 
   // toggle click
   const menuToggleHandler = () => {
@@ -18,17 +25,15 @@ const Navbar = () => {
     setTheme(theme === themes.light ? themes.dark : themes.light);
     localStorage.setItem(
       "userTheme",
-      theme === themes.light ? "dark" : "light"
+      theme === themes.light ? "dark" : "light",
     );
   };
 
-  // active links
-  const navLinkStyles = ({ isActive }) => {
-    return {
-      fontWeight: isActive ? "bold" : "normal",
-      borderBottom: isActive ? "4px solid #784cfb" : "none",
-    };
-  };
+  const navItemStyles = (isActive) => ({
+    color: "white",
+    fontWeight: isActive ? "bold" : "normal",
+    borderBottom: isActive ? "4px solid #784cfb" : "none",
+  });
 
   // contact
   const scrollToBottom = () => {
@@ -36,60 +41,67 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className='outer'>
+      <div className="outer">
         <nav className="navbar">
           <div className="navbar-title">
             <button className="navbar-btn" onClick={menuToggleHandler}>
-              <Menu fontSize="large" sx={{ color: 'white' }} />
+              <Menu fontSize="large" sx={{ color: "white" }} />
             </button>
-            <Link className="navbar-brand" to="/" style={{color: 'white'}}>
+            <Link className="navbar-brand" to="/" style={{ color: "white" }}>
               adidoshi
             </Link>
           </div>
           <ul className="navbar-list">
-            <NavLink to="/" style={navLinkStyles}>
+            <NavLink to="/" onClick={() => setActiveItem("home")}>
               <li
                 className="navbar-list-item"
-                style={{color: 'white'}}
-                >
+                style={navItemStyles(activeItem === "home")}
+              >
                 Home
               </li>
             </NavLink>
-            <a href="#skillSection">
+            <a href="#skillSection" onClick={() => setActiveItem("skills")}>
               <li
                 className="navbar-list-item"
-                style={{color: 'white'}}
-               >
+                style={navItemStyles(activeItem === "skills")}
+              >
                 Skills
               </li>
             </a>
-            <a href="#projectSection">
+            <a href="#projectSection" onClick={() => setActiveItem("projects")}>
               <li
                 className="navbar-list-item"
-                style={{color: 'white'}}
-               >
+                style={navItemStyles(activeItem === "projects")}
+              >
                 Projects
               </li>
             </a>
-            <a href="#blogSection">
+            <a href="#blogSection" onClick={() => setActiveItem("blogs")}>
               <li
                 className="navbar-list-item"
-                style={{color: 'white'}}
-               >
+                style={navItemStyles(activeItem === "blogs")}
+              >
                 Blogs
               </li>
             </a>
-            <li className="navbar-list-item" onClick={scrollToBottom} style={{color: 'white'}}>
+            <li
+              className="navbar-list-item"
+              onClick={() => {
+                setActiveItem("contact");
+                scrollToBottom();
+              }}
+              style={navItemStyles(activeItem === "contact")}
+            >
               Contact
             </li>
 
             <li>
-              <button className="navbar-btn" onClick={themeModeHandler} >
+              <button className="navbar-btn" onClick={themeModeHandler}>
                 {theme === themes.light ? (
                   <DarkMode
                     sx={{
                       fontSize: 25,
-                      color: 'white',
+                      color: "white",
                     }}
                   />
                 ) : (
@@ -111,48 +123,71 @@ const Navbar = () => {
           left: menuToggle ? "0" : "-100rem",
           color: theme.foreground,
           backgroundColor: theme.sidebarBg,
-        }}>
+        }}
+      >
         <button className="sidebar-btn" onClick={() => setMenuToggle(false)}>
           <Close sx={{ fontSize: 30, color: iconColor }} />
         </button>
         <ul className="sidebar-list">
-          <NavLink to="/"  style={{ color: theme.foreground}}>
+          <NavLink
+            to="/"
+            style={{ color: theme.foreground }}
+            onClick={() => {
+              setActiveItem("home");
+              setMenuToggle(false);
+            }}
+          >
             <li>Home</li>
           </NavLink>
-          <a href="#skillSection">
-              <li
-                className="sidebar-list"
-                style={{ color: theme.foreground}}
-                onClick={() => setMenuToggle(false)}
-               >
-                Skills
-              </li>
-            </a>
-            <a href="#projectSection">
-              <li
-                className="sidebar-list"
-                style={{ color: theme.foreground}}
-                onClick={() => setMenuToggle(false)}
-               >
-                Projects
-              </li>
-            </a>
-            <a href="#blogSection">
-              <li
-                className="sidebar-list"
-                style={{ color: theme.foreground}}
-                onClick={() => setMenuToggle(false)}
-               >
-                Blogs
-              </li>
-            </a>
+          <a
+            href="#skillSection"
+            onClick={() => {
+              setActiveItem("skills");
+              setMenuToggle(false);
+            }}
+          >
+            <li className="sidebar-list" style={{ color: theme.foreground }}>
+              Skills
+            </li>
+          </a>
+          <a
+            href="#projectSection"
+            onClick={() => {
+              setActiveItem("projects");
+              setMenuToggle(false);
+            }}
+          >
+            <li className="sidebar-list" style={{ color: theme.foreground }}>
+              Projects
+            </li>
+          </a>
+          <a
+            href="#blogSection"
+            onClick={() => {
+              setActiveItem("blogs");
+              setMenuToggle(false);
+            }}
+          >
+            <li className="sidebar-list" style={{ color: theme.foreground }}>
+              Blogs
+            </li>
+          </a>
           {/* <NavLink to="projects" style={navLinkStyles}>
             <li>Projects</li>
           </NavLink>
           <NavLink to="blogs" style={navLinkStyles}>
             <li>Blogs</li>
           </NavLink> */}
-          <li  style={{ color: theme.foreground}} onClick={scrollToBottom}>Contact</li>
+          <li
+            style={{ color: theme.foreground }}
+            onClick={() => {
+              setActiveItem("contact");
+              setMenuToggle(false);
+              scrollToBottom();
+            }}
+          >
+            Contact
+          </li>
         </ul>
       </div>
     </>

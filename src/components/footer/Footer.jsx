@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 // import gmailIcon from "../../assets/gmail.svg";
 import { ArrowUpward } from "@mui/icons-material";
@@ -7,7 +6,7 @@ import { Fab } from "@mui/material";
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0
+      top: 0,
     });
   };
   return (
@@ -20,7 +19,8 @@ const Footer = () => {
               <a
                 href="mailto:adityadoshi25@gmail.com"
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+              >
                 <img height="28px" width="28px" src={gmailIcon} alt="..." />
               </a>
             </li>
@@ -28,7 +28,8 @@ const Footer = () => {
               <a
                 href="https://github.com/adidoshi"
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+              >
                 <i className="devicon-github-original colored"></i>
               </a>
             </li>
@@ -36,7 +37,8 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/aditya-doshi08"
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+              >
                 <i className="devicon-linkedin-plain colored"></i>
               </a>
             </li>
@@ -44,7 +46,8 @@ const Footer = () => {
               <a
                 href="https://twitter.com/adidoshi08"
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+              >
                 <i className="devicon-twitter-original colored"></i>
               </a>
             </li>
@@ -52,7 +55,7 @@ const Footer = () => {
 
           <div className="footer-made-with">&lt;&gt; Aditya &lt;/&gt;</div>
           <div className="copyright">
-            © 2022, Built with&nbsp;<span>React</span>
+            © 2026, Built with&nbsp;<span>React</span>
           </div>
         </div>
         {/* floating button */}

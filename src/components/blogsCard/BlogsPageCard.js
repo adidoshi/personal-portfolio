@@ -1,4 +1,3 @@
-import React from "react";
 import useTheme from "../../context/ThemeContext";
 import "../card/Card.css";
 
@@ -9,7 +8,8 @@ const BlogsPageCard = ({ blog }) => {
   return (
     <div
       className="card"
-      style={{ backgroundColor: theme.cardBg, boxShadow: theme.cardBoxShadow }}>
+      style={{ backgroundColor: theme.cardBg, boxShadow: theme.cardBoxShadow }}
+    >
       <h2 className="card-title">{blog.title}</h2>
       <div className="card-date">{blog.date}</div>
       <p>{blog.description}</p>
