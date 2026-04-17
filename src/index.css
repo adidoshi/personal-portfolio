@@ -1,32 +1,228 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+@layer base {
+  :root {
+    --font-display: "Space Grotesk";
+    --font-body: "Satoshi";
+    --font-mono: "JetBrains Mono";
+    --radius: 0.625rem;
+
+    --background: 0.98 0.008 240;
+    --foreground: 0.18 0.015 240;
+    --card: 1 0.004 240;
+    --card-foreground: 0.18 0.015 240;
+    --popover: 1 0.004 240;
+    --popover-foreground: 0.18 0.015 240;
+
+    --primary: 0.58 0.22 285;
+    --primary-foreground: 0.98 0.005 285;
+
+    --secondary: 0.95 0.01 240;
+    --secondary-foreground: 0.28 0.015 240;
+    --muted: 0.94 0.01 240;
+    --muted-foreground: 0.5 0.012 240;
+
+    --accent: 0.72 0.15 55;
+    --accent-foreground: 0.18 0.015 55;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.005 25;
+
+    --border: 0.9 0.008 240;
+    --input: 0.9 0.008 240;
+    --ring: 0.58 0.22 285;
+
+    --chart-1: 0.65 0.22 40;
+    --chart-2: 0.6 0.12 185;
+    --chart-3: 0.4 0.07 227;
+    --chart-4: 0.83 0.19 84;
+    --chart-5: 0.77 0.19 70;
+
+    --sidebar: 0.98 0.005 240;
+    --sidebar-foreground: 0.18 0.015 240;
+    --sidebar-primary: 0.58 0.22 285;
+    --sidebar-primary-foreground: 0.98 0.005 285;
+    --sidebar-accent: 0.94 0.01 240;
+    --sidebar-accent-foreground: 0.28 0.015 240;
+    --sidebar-border: 0.9 0.008 240;
+    --sidebar-ring: 0.58 0.22 285;
+  }
+
+  .dark {
+    --background: 0.14 0.015 50;
+    --foreground: 0.92 0.01 60;
+    --card: 0.18 0.018 50;
+    --card-foreground: 0.92 0.01 60;
+    --popover: 0.18 0.018 50;
+    --popover-foreground: 0.92 0.01 60;
+
+    --primary: 0.72 0.17 290;
+    --primary-foreground: 0.14 0.015 290;
+
+    --secondary: 0.22 0.02 50;
+    --secondary-foreground: 0.82 0.01 60;
+    --muted: 0.22 0.02 50;
+    --muted-foreground: 0.52 0.012 55;
+
+    --accent: 0.58 0.14 55;
+    --accent-foreground: 0.95 0.005 55;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.92 0.01 25;
+
+    --border: 0.28 0.02 50;
+    --input: 0.28 0.02 50;
+    --ring: 0.72 0.17 290;
+
+    --chart-1: 0.65 0.22 40;
+    --chart-2: 0.6 0.12 185;
+    --chart-3: 0.4 0.07 227;
+    --chart-4: 0.83 0.19 84;
+    --chart-5: 0.77 0.19 70;
+
+    --sidebar: 0.18 0.015 50;
+    --sidebar-foreground: 0.92 0.01 60;
+    --sidebar-primary: 0.72 0.17 290;
+    --sidebar-primary-foreground: 0.14 0.015 290;
+    --sidebar-accent: 0.22 0.02 50;
+    --sidebar-accent-foreground: 0.82 0.01 60;
+    --sidebar-border: 0.28 0.02 50;
+    --sidebar-ring: 0.72 0.17 290;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
 }
 
-:root {
-  --primary-color: #784cfb;
-  --secondary-color: #7b5ed3;
-  --dark-gray: #9ca3af;
-}
+@layer utilities {
+  @font-face {
+    font-family: "Space Grotesk";
+    src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+    font-display: swap;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/assets/fonts/Satoshi.woff2") format("woff2");
+    font-display: swap;
+  }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+    font-display: swap;
+  }
 
-input,
-textarea,
-button,
-select,
-a {
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+  }
+
+  .slide-up {
+    animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .scale-hover {
+    @apply transition-smooth;
+  }
+
+  .scale-hover:hover {
+    @apply scale-105;
+  }
+
+  .shadow-lift {
+    @apply transition-smooth;
+  }
+
+  .shadow-lift:hover {
+    @apply shadow-2xl;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .float {
+      animation: none;
+    }
+
+    .fade-in {
+      animation: none;
+      opacity: 1;
+    }
+
+    .slide-up {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+
+    .gradient-animate {
+      animation: none;
+    }
+
+    .transition-smooth {
+      transition: none;
+    }
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite;
+  }
 }
