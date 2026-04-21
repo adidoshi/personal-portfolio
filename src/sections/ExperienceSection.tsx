@@ -18,18 +18,8 @@ function TimelineEntry({ exp, index }: TimelineEntryProps) {
   return (
     <div className="relative grid grid-cols-1 md:grid-cols-[1fr_48px_1fr] gap-0 items-start">
       {/* Left column (desktop: alternating) */}
-      <div
-        className={cn(
-          "hidden md:flex",
-          isEven ? "justify-end pr-8" : "justify-start pl-8 md:order-last",
-        )}
-      >
-        {isEven ? (
-          <TimelineCard exp={exp} index={index} side="right" />
-        ) : (
-          // Spacer on right side when card is on right
-          <div />
-        )}
+      <div className="hidden md:flex md:col-start-1 justify-end pr-8">
+        {isEven && <TimelineCard exp={exp} index={index} side="right" />}
       </div>
 
       {/* Center connector */}
@@ -47,17 +37,8 @@ function TimelineEntry({ exp, index }: TimelineEntryProps) {
       </div>
 
       {/* Right column (desktop: alternating) */}
-      <div
-        className={cn(
-          "hidden md:flex",
-          !isEven ? "justify-start pl-8" : "justify-end pr-8 md:order-last",
-        )}
-      >
-        {!isEven ? (
-          <TimelineCard exp={exp} index={index} side="left" />
-        ) : (
-          <div />
-        )}
+      <div className="hidden md:flex md:col-start-3 justify-start pl-8">
+        {!isEven && <TimelineCard exp={exp} index={index} side="left" />}
       </div>
 
       {/* Mobile: always stacked */}
@@ -82,13 +63,13 @@ function TimelineCard({ exp, index, side }: TimelineCardProps) {
     <AnimatedSection
       delay={index * 120}
       direction={direction}
-      className="w-full"
+      className="w-full min-w-0"
     >
       <Card
         className={cn(
           "group bg-card border-border overflow-hidden",
           "hover:shadow-elevated hover:-translate-y-0.5 transition-all duration-500 ease-out",
-          "shadow-subtle mb-8",
+          "shadow-subtle mb-5 md:mb-2",
         )}
         data-ocid={`experience.item.${index + 1}`}
       >
@@ -105,10 +86,20 @@ function TimelineCard({ exp, index, side }: TimelineCardProps) {
               <p className="text-primary font-semibold text-sm mt-0.5">
                 {exp.company}
               </p>
-              <div className="flex items-center gap-1.5 text-xs text-muted-foreground mt-1">
+              <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-muted-foreground mt-1 min-w-0">
                 <MapPin size={11} className="shrink-0" />
-                {exp.location}
+                <span className="break-words">{exp.location}</span>
+                {exp.period && <span className="text-muted-foreground/70">|</span>}
+                {exp.period && <span className="break-words">{exp.period}</span>}
               </div>
+              {/* <div className="shrink-0">
+              <Badge
+                variant="outline"
+                className="text-xs border-primary/30 text-primary font-mono bg-primary/5"
+              >
+                {exp.period}
+              </Badge>
+              </div> */}
             </div>
           </div>
 
