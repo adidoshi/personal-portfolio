@@ -158,9 +158,25 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCES: Experience[] = [
   {
+    company: "Spearhead Solutions",
+    role: "Frontend Developer",
+    period: "2024 - 2026",
+    location: "Pune, IN, Remote",
+    summary:
+      "Joined as a founding engineer to build LMS for financial markets, contributing to architecture decisions, feature development & releases.",
+    achievements: [
+      "Developed secure role-based routing and authorization flows for students and mentors.",
+      "Integrated Razorpay payment checkout flow on client side for course purchases.",
+      "Executed Vimeo SDK for live video webinar and automated post session recording storage to cloud.",
+      "Implemented a quiz and assessment engine with real-time countdown timers, dynamic scoring, and automated email notifications for winners.",
+      "Built a trade journaling and analytics dashboard with mentors access protected review.",
+    ],
+    tech: ["React", "TypeScript", "Redux-Toolkit", "Tailwind CSS", "Vimeo SDK"],
+  },
+  {
     company: "Wednesday Solutions",
     role: "Software Engineer - Frontend",
-    period: "",
+    period: "2022 - 2023",
     location: "Pune, India",
     summary:
       "Developed user-facing features for a vertical SaaS marketplace product with React used by thousands of customers.",
