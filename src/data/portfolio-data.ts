@@ -62,8 +62,8 @@ export const SKILLS: Skill[] = [
   },
   // Backend & AI
   {
-    name: "Node.js",
-    icon: "SiNodedotjs",
+    name: "Express.js",
+    icon: "SiExpress",
     category: "backendAI",
     level: "proficient",
   },
@@ -74,17 +74,18 @@ export const SKILLS: Skill[] = [
     level: "proficient",
   },
   {
+    name: "Claude",
+    icon: "ClaudeIcon",
+    category: "backendAI",
+    level: "proficient",
+  },
+  {
     name: "OpenAI API",
     icon: "SiOpenai",
     category: "backendAI",
     level: "proficient",
   },
-  {
-    name: "VAPI AI",
-    icon: "SiVagrant",
-    category: "backendAI",
-    level: "proficient",
-  },
+
   // Tools
   { name: "GitHub", icon: "SiGithub", category: "tools", level: "expert" },
   { name: "Git", icon: "LiaGit", category: "tools", level: "expert" },
