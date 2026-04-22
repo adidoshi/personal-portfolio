@@ -23,6 +23,7 @@ import {
   SiVagrant,
   SiJest,
   SiMongodb,
+  SiExpress,
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { LiaGit } from "react-icons/lia";
@@ -53,6 +54,7 @@ const ICON_MAP: Record<string, IconComponent> = {
   SiJest: SiJest as unknown as IconComponent,
   LiaGit: LiaGit as unknown as IconComponent,
   SiMongodb: SiMongodb as unknown as IconComponent,
+  SiExpress: SiExpress as unknown as IconComponent,
 };
 
 const CUSTOM_ICON_MAP: Record<string, string> = {
@@ -60,6 +62,7 @@ const CUSTOM_ICON_MAP: Record<string, string> = {
   SiTanstackquery: "/assets/images/TanstackQueryLogo.svg",
   CICDIcon: "/assets/images/CICDIcon.png",
   ViteLogo: "/assets/images/ViteLogo.svg",
+  ClaudeIcon: "/assets/images/claude.svg",
 };
 
 // ─── Category configuration ─────────────────────────────────────────────────
