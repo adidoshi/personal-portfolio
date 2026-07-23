@@ -47,7 +47,7 @@ export default function App() {
               </div>
               <div className="w-full lg:ml-8 lg:flex-1">
                 <img
-                  src="/assets/images/about-img.png"
+                  src="/assets/images/about-img-webp.webp"
                   alt=""
                   aria-hidden="true"
                   className="w-full max-w-sm self-center object-contain lg:h-full lg:max-w-none rounded-2xl"
