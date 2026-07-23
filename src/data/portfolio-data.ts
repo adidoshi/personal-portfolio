@@ -100,7 +100,7 @@ export const PROJECTS: Project[] = [
     tagline: "Turn static PDFs into interactive, voice-driven assistants",
     description:
       "Lets readers upload a PDF, convert it into searchable text segments, and speak with an AI voice assistant that answers using the actual contents of the book. It combines PDF parsing & chunk-based retrieval.",
-    image: "/assets/images/chatlybook-cover.png",
+    image: "/assets/images/chatlybook-cover-webp.webp",
     tags: [
       "Next.js",
       "Clerk Auth, Sub & Billing",
